@@ -104,7 +104,7 @@ window.loginWithGoogle = async function () {
     );
 
     alert("Google Sign-In successful!");
-    window.location.href = "index.html";
+    window.location.href = "contact.html";
   } catch (error) {
     console.error("GOOGLE LOGIN ERROR:", error);
 
@@ -114,4 +114,5 @@ window.loginWithGoogle = async function () {
       alert("Google login failed: " + error.message);
     }
   }
+
 };
