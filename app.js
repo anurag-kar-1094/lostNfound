@@ -69,9 +69,9 @@ async function isMatch(lost, found) {
   if (found.itemType !== lost.itemType) return false;
   if (found.color && lost.color && found.color !== lost.color) return false;
   if (
-    found.nearbyLocation &&
+    found.location &&
     lost.nearbyLocation &&
-    found.nearbyLocation !== lost.nearbyLocation
+    found.location !== lost.nearbyLocation
   ) return false;
   const ld = lost.details || {};
   const fd = found.details || {};
@@ -190,3 +190,4 @@ $("logoutBtn")?.addEventListener("click", async () => {
   window.location.href = "index.html";
 
 });
+
