@@ -200,6 +200,7 @@ form.addEventListener("submit", async (e) => {
     const foundItemData = {
         userId: currentUser.uid,
         itemType: getFinalValue("itemType"),
+        color: getFinalValue("color"),
         location: getFinalValue("location"),
         details: {},
         date,
@@ -229,3 +230,4 @@ form.addEventListener("submit", async (e) => {
 document.getElementById("date").max =
 
     new Date().toISOString().split("T")[0];
+
