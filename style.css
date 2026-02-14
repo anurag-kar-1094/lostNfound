@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #9d1ce7, #a46eeb);
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+
+.top-bar {
+  position: relative;
+  background: #a559fc;
+  color: white;
+  padding: 15px 20px;
+}
+
+.top-bar h1,
+.top-bar p {
+  text-align: center;
+  margin: 0;
+}
+
+.top-bar p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.login-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: white;
+  color: #6200ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+}
+
+.login-btn:hover {
+  background: #88ffe1;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 400px;
+  padding: 25px;
+  border-radius: 15px;
+  min-height: 62vh;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+label {
+  margin-top: 12px;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4b6cb7;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #395591;
+}
+
+.preview {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.progress {
+  width: 100%;
+  height: 15px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#confidenceBar {
+  height: 100%;
+  width: 0%;
+  background: green;
+}
+
+.reliability {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.why-box {
+  margin-top: 15px;
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.recent {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.checkbox {
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 15px;
+}
+
+.cta-bar {
+  width: 100vw;
+  background: #deb5ff;
+  padding: 5px;
+}
+
+.cta-content {
+  max-width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-content h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cta-buttons button {
+  padding: 5px;
+  font-size: 1.2rem;
+  height: 2.2em;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.lost-btn {
+  background: #e53935;
+}
+
+.lost-btn:hover {
+  background: #c62828;
+}
+
+.found-btn {
+  background: #2e7d32;
+}
+
+.found-btn:hover {
+  background: #1b5e20;
+}
+
+.zz, #recoveredCard {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.user-box {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.logout-btn-small {
+  width: auto !important;
+  height: 4vh;
+  padding: 0px 10px;
+  font-size: 1.2rem;
+  background: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 1vw;
+  top: 8vh;
+}
+
+.logout-btn-small:hover {
+  background: #d32f2f;
+}
+
+#recoveredCard {
+  background-color: #e497fc;
+}
+
+.dev-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dev-label {
+  background: #1f2937;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+.dev-card {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 23.3vw;
+  background: #2f3747;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dev-widget:hover .dev-card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dev-title {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.dev-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.green {
+  color: #4ade80;
+}
+
+.dev-sub {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.dev-card hr {
+  border: none;
+  border-top: 1px solid #4b5563;
+  margin: 10px 0;
+}
+
+.dev-yr {
+  font-size: 0.9rem;
+
+}

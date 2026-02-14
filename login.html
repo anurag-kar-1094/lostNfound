@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lost & Found System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <input type="email" id="loginEmail" placeholder="Email" required><br><br>
+            <input type="password" id="loginPassword" placeholder="Password" required><br><br>
+            <button onclick="loginUser()">Login</button>
+            <button type="button" onclick="loginWithGoogle()">
+                🔐 Sign in with Google
+            </button>
+
+            <p style="text-align: center;padding: 10px;">
+                New user?
+                <a href="register.html">Register here</a>
+            </p>
+        </div>
+    </div>
+    <footer style="position: absolute; bottom: 10px; left: 42vw;">
+        <p>© Gamma Coders | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="auth.js"></script>
+</body>
+
+</html>

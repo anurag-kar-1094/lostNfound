@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Lost & Found System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <span id="userWelcome" class="welcome-text" style="display:none;"></span>
+        <button id="loginBtn" class="login-btn">Login</button>
+        <button id="logoutBtn" class="logout-btn-small" style="display:none;">Logout</button>
+        <h1>🔍 Smart Lost & Found System</h1>
+        <p>City-wise intelligent matching</p>
+    </header>
+    <div class="cta-bar">
+        <div class="cta-content">
+            <h2>Did you lose or find anything?</h2>
+            <div class="cta-buttons">
+                <button id="goLost" class="lost-btn">Report Lost Item</button>
+                <button id="goFound" class="found-btn">Report Found Item</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card zz" id="myLostItems">
+            <h2>📌 My Reported Lost Items</h2>
+            <p id="noMyLostText">You have not reported any lost items.</p>
+        </div>
+        <div class="card zz" id="dispMatches">
+            <h2>🔔 Possible Matches</h2>
+            <p id="noMatchText">No matches found yet.</p>
+        </div>
+        <div class="card" id="recoveredCard">
+            <h2>🎉 Items Recovered Through Our Platform</h2>
+            <div id="dispRecovered"></div>
+            <p id="noRecoveredText">No items recovered yet.</p>
+        </div>
+    </div>
+    <footer style="position: absolute; bottom: 10px; left: 42vw;">
+        <p>© Gamma Coders | All Rights Reserved</p>
+    </footer>
+    <div class="dev-widget">
+        <div class="dev-label">👨‍💻 Developer</div>
+        <div class="dev-card">
+            <p class="dev-title">DESIGN & DEVELOPED BY</p>
+            <p class="dev-name green">Anurag Kar - Project Leader</p>
+            <p class="dev-yr">4th Semester BTech CSE, 2026</p>
+            <hr>
+            <p class="dev-name green">Rohit Singh - Project Co-ordinator</p>
+            <p class="dev-yr">4th Semester BTech CSE, 2026</p>
+            <hr>
+            <p class="dev-name green">Rohit Singh - Front End, Landing Page</p>
+            <p class="dev-yr">4th Semester BTech CSE, 2026</p>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
