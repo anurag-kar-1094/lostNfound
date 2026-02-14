@@ -39,6 +39,10 @@ onAuthStateChanged(auth, async (user) => {
 
     const userRef = doc(db, "users", user.uid);
     const snap = await getDoc(userRef);
+      if (!snap.exists() || !snap.data().contactNumber) {
+        window.location.href = "contact.html";
+        return;
+      }
 
     if (!snap.exists()) {
         await setDoc(userRef, {
@@ -223,4 +227,5 @@ form.addEventListener("submit", async (e) => {
 
 
 document.getElementById("date").max =
+
     new Date().toISOString().split("T")[0];
