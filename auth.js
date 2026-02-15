@@ -104,7 +104,9 @@ window.loginWithGoogle = async function () {
     );
 
     alert("Google Sign-In successful!");
-    window.location.href = "contact.html";
+    const snap = await getDoc(doc(db, "users", user.uid));
+    if (!snap.data().contactNumber)
+      window.location.href = "contact.html";
   } catch (error) {
     console.error("GOOGLE LOGIN ERROR:", error);
 
@@ -116,3 +118,4 @@ window.loginWithGoogle = async function () {
   }
 
 };
+
