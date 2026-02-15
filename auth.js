@@ -97,25 +97,29 @@ window.loginWithGoogle = async function () {
       {
         name: user.displayName || "User",
         email: user.email,
-        contactNumber: "",
         createdAt: new Date()
       },
       { merge: true }
     );
 
     alert("Google Sign-In successful!");
-    const snap = await getDoc(doc(db, "users", user.uid));
-    if (!snap.data().contactNumber)
+
+    const snap = await getDoc(userRef);
+    if (!snap.exists() || !snap.data().contactNumber) {
       window.location.href = "contact.html";
+    } else {
+      window.location.href = "index.html";
+    }
+
   } catch (error) {
     console.error("GOOGLE LOGIN ERROR:", error);
-
     if (error.code === "auth/popup-closed-by-user") {
       alert("Popup closed before completing sign-in.");
     } else {
       alert("Google login failed: " + error.message);
     }
   }
-
 };
+
+
 
